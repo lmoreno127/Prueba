@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= link_to 'Inicio', root_path %>
+    <% flash.each do |key, value| %>
+       <% if key=="error" %>
+         <div class="alert alert-danger"><%= value %></div>
+       <%else%>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+       <%end%>
+      
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

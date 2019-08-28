@@ -1,0 +1,11 @@
+<h1>Datos del Usuario</h1>
+<h2>Nombres: </h2><h4><%= @user.nombres %></h4><br/>
+<h2>Apellidos: </h2><h4><%= @user.apellidos %></h4><br/>
+<h2>Telefono: </h2><h4><%= @user.telefono %></h4><br/>
+<h2>Email: </h2><h4><%= @user.email %></h4><br/>
+<h2>Dirección: </h2><h4><%= @user.direccion %></h4><br/>
+<h2>Arte: </h2><h4><%= @user.infoauser.arte %></h4><br/>
+<h2>Cine: </h2><h4><%= @user.infoauser.cine %></h4><br/>
+<h2>Música: </h2><h4><%= @user.infoauser.musica %></h4><br/>
+<%= link_to 'Editar Usuario', edit_user_path(@user), class: "btn btn-warning" %>
+<%= link_to 'Eliminar Usuario', user_path(@user), class: "btn btn-danger",method: :delete %>

@@ -1,0 +1,14 @@
+<%= form_for @user do |f| %>
+  Nombres:<br /><%= f.text_field :nombres %><br />
+  Apellidos:<br /><%= f.text_field :apellidos %><br />
+  Telefono:<br /> <%= f.text_field :telefono %><br />
+  Email:<br /> <%= f.email_field :email%><br />
+  Dirección:<br /><%= f.text_field :direccion %><br />
+  <%= f.fields_for :infoauser do |infoa_user| %>
+    Arte:<br /><%= infoa_user.text_area :arte %><br />
+    Cine:<br /><%= infoa_user.text_area :cine %><br />
+    Música:<br /><%= infoa_user.text_area :musica %><br />
+  <% end %>
+  
+  <br /><%= f.submit %>
+<% end %>

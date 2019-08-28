@@ -1,0 +1,14 @@
+<h1>Usuarios</h1>
+
+<ul>
+  <% @users.each do |user| %>
+    <li>
+     <b>Nombre:</b><%= user.nombres %>
+     <b>Email:</b><%= user.email %>
+     <%= link_to 'Ver Usuario', user_path(user), class: "btn btn-info" %>
+     <%= link_to 'Eliminar Usuario', user_path(user), class: "btn btn-danger",method: :delete %>
+    </li>
+    <br/>
+  <% end %>
+</ul>
+
